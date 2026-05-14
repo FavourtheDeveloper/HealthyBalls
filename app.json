@@ -1,29 +1,53 @@
 {
   "expo": {
     "name": "HealthyBalls",
-    "slug": "HealthyBalls",
+    "slug": "healthyballs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1A6B3C"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.healthyballs.app",
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#1A6B3C"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.healthyballs.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your camera to take a profile photo.",
+          "cameraPermission": "Allow HealthyBalls to take your selfie for registration."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow HealthyBalls to access your camera."
+        }
+      ]
+    ]
   }
 }
